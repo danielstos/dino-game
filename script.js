@@ -44,6 +44,7 @@ function creatCactus() {
     const cactus = document.createElement('div');
     let cactusPosition = 1000;
     let randomTime = Math.random() * 6000;
+    let contarPontos = true;
     
 
     cactus.classList.add('cactus');
@@ -59,8 +60,9 @@ function creatCactus() {
             document.body.innerHTML = '<h1 class="game-over">Fim de jogo :( score:'+pontos+'</h1>';
        
 
-        } else if (cactusPosition > 0 && cactusPosition < 80 && position > 180) {
-           pontos+=1;            
+        } else if (contarPontos && cactusPosition > 0 && cactusPosition < 80 && position > 180) {
+           pontos+=10;
+           contarPontos = false;
             
         }
         else {
