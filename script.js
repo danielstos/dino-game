@@ -60,7 +60,7 @@ function creatCactus() {
             document.body.innerHTML = '<h1 class="game-over">Fim de jogo :( score:'+pontos+'</h1>';
        
 
-        } else if (contarPontos && cactusPosition > 0 && cactusPosition < 80 && position > 180) {
+        } else if (contarPontos && cactusPosition > 0 && cactusPosition < 80 && position > 120) {
            pontos+=10;
            contarPontos = false;
             
@@ -70,7 +70,7 @@ function creatCactus() {
             cactus.style.left = cactusPosition + 'px';
         }
         score.textContent = "score:" + pontos;
-    }, 30);
+    }, 15);
 
     setTimeout(creatCactus, randomTime)
 }
